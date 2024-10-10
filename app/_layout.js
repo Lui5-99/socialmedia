@@ -1,11 +1,11 @@
-import { StatusBar } from "react-native";
-import { Text, View } from "react-native";
+import { Stack } from "expo-router";
+import { initializeApp } from "firebase/app";
 
 export default function Layout() {
   return (
-    <View className="flex-1 justify-center items-center bg-black">
-      <Text className="text-white">Layout</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Stack>
+      <Stack.Screen name="index" options={{ title: "Login" }} />
+      <Stack.Screen name="Home" />
+    </Stack>
   );
 }
